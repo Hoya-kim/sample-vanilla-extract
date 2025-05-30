@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     vanillaExtractPlugin({
-      identifiers: ({ hash }) => `prefix_${hash}`,
+      // identifiers: ({ hash }) => `prefix_${hash}`,
     }),
   ],
 });
