@@ -1,28 +1,23 @@
-import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './styles/App.css';
+import Logo from './components/Logo';
+import CounterCard from './components/CounterCard';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
+        <Logo url='https://vite.dev' className='logo' imgSrc={viteLogo} imgAlt='Vite logo' />
+        <Logo
+          url='https://react.dev'
+          className='logo react'
+          imgSrc={reactLogo}
+          imgAlt='React logo'
+        />
       </div>
       <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
+      <CounterCard />
       <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
     </>
   );
